@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SpotMe - Complete App Features Guide</title>
+    <style>
+        @page {
+            margin: 1in;
+        }
+        body {
+            font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #1a1a2e;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        .cover {
+            text-align: center;
+            padding: 100px 0;
+            page-break-after: always;
+        }
+        .cover h1 {
+            font-size: 42pt;
+            color: #3B82F6;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .cover .tagline {
+            font-size: 16pt;
+            color: #64748b;
+            margin-bottom: 60px;
+        }
+        .cover .version {
+            font-size: 12pt;
+            color: #94a3b8;
+        }
+        .cover .logo {
+            font-size: 80pt;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24pt;
+            color: #3B82F6;
+            border-bottom: 3px solid #3B82F6;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            font-size: 16pt;
+            color: #1e40af;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 12pt;
+            color: #3730a3;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .section {
+            page-break-inside: avoid;
+            margin-bottom: 30px;
+        }
+        .feature-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-left: 4px solid #3B82F6;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .feature-box h3 {
+            margin-top: 0;
+            color: #1e40af;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background: #dbeafe;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th {
+            background: #3B82F6;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 9pt;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        .badge-bronze { background: #fbbf24; color: #78350f; }
+        .badge-silver { background: #cbd5e1; color: #334155; }
+        .badge-gold { background: #fcd34d; color: #713f12; }
+        .badge-diamond { background: #a5f3fc; color: #155e75; }
+        .badge-elite { background: #c084fc; color: #581c87; }
+        .toc {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        .toc h2 {
+            margin-top: 0;
+            color: #3B82F6;
+        }
+        .toc ol {
+            columns: 2;
+            column-gap: 40px;
+        }
+        .toc li {
+            margin-bottom: 8px;
+        }
+        .summary-box {
+            background: linear-gradient(135deg, #3B82F6 0%, #1e40af 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        .summary-box h2 {
+            color: white;
+            margin-top: 0;
+        }
+        .summary-box ul {
+            columns: 2;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+    <div class="logo">💪</div>
+    <h1>SpotMe</h1>
+    <p class="tagline">Complete App Features Guide</p>
+    <p class="version">Version 1.0.0<br>December 2025</p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li>Overview</li>
+        <li>Account & Profile</li>
+        <li>Nutrition & Calorie Tracking</li>
+        <li>Workout Tracking</li>
+        <li>Body Composition</li>
+        <li>Social Features</li>
+        <li>Challenges & Competitions</li>
+        <li>Awards & Achievements</li>
+        <li>Leaderboards & Ranking</li>
+        <li>Boost System</li>
+        <li>Health Integration</li>
+        <li>Notifications & Reminders</li>
+        <li>Settings & Preferences</li>
+    </ol>
+</div>
+
+<!-- OVERVIEW -->
+<h1>1. Overview</h1>
+<div class="section">
+    <p>SpotMe is a comprehensive social fitness app that combines nutrition tracking, workout logging, body composition analysis, and social features into one platform. Users can track their fitness journey, compete with friends, and earn achievements along the way.</p>
+
+    <div class="summary-box">
+        <h2>Key Features at a Glance</h2>
+        <ul>
+            <li>Complete macro & calorie tracking</li>
+            <li>Barcode scanning & nutrition label OCR</li>
+            <li>Gym workout logging with splits</li>
+            <li>GPS cardio tracking</li>
+            <li>AI-powered body composition analysis</li>
+            <li>Social feed & training partners</li>
+            <li>1v1 fitness challenges</li>
+            <li>200+ achievements to earn</li>
+            <li>Global leaderboard & rankings</li>
+            <li>Apple Health & Health Connect sync</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ACCOUNT & PROFILE -->
+<h1>2. Account & Profile</h1>
+
+<div class="section">
+    <div class="feature-box">
+        <h3>Registration & Login</h3>
+        <ul>
+            <li>Create an account with email and password</li>
+            <li>Secure authentication via Firebase</li>
+            <li>Select your fitness goal on signup: <span class="highlight">Cutting</span>, <span class="highlight">Bulking</span>, <span class="highlight">Maintenance</span>, or <span class="highlight">Recomp</span></li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Profile Customization</h3>
+        <ul>
+            <li>Set username and bio</li>
+            <li>Upload profile picture</li>
+            <li>Choose which stats are visible to others (age, weight, height, body fat, muscle mass, fitness class)</li>
+            <li>Public or private profile options</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Profile Display</h3>
+        <ul>
+            <li>View your posts in grid format</li>
+            <li>See your training partners and followers count</li>
+            <li>Display current body stats and fitness class</li>
+            <li>Showcase earned awards</li>
+            <li>View rank badge and tier status</li>
+        </ul>
+    </div>
+</div>
+
+<!-- NUTRITION TRACKING -->
+<h1>3. Nutrition & Calorie Tracking</h1>
+
+<div class="section">
+    <div class="feature-box">
+        <h3>Daily Food Logging</h3>
+        <ul>
+            <li>Log meals by category: Breakfast, Lunch, Dinner, Snacks</li>
+            <li>Navigate between different dates</li>
+            <li>View daily totals and progress toward goals</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Smart Food Entry Methods</h3>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><strong>Food Database Search</strong></td>
+                <td>Search our extensive built-in food database</td>
+            </tr>
+            <tr>
+                <td><strong>Barcode Scanner</strong></td>
+                <td>Scan product barcodes to instantly log nutrition info (powered by USDA FoodData Central)</td>
+            </tr>
+            <tr>
+                <td><strong>Nutrition Label OCR</strong></td>
+                <td>Take a photo of any nutrition label and our AI will automatically extract the values</td>
+            </tr>
+            <tr>
+                <td><strong>Manual Entry</strong></td>
+                <td>Enter custom foods with full macro information</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="feature-box">
+        <h3>Comprehensive Macro Tracking</h3>
+        <p>Track all essential nutrients:</p>
+        <ul>
+            <li><strong>Macros:</strong> Calories, Protein, Carbohydrates, Fat, Saturated Fat, Trans Fat, Fiber, Sugar, Added Sugar</li>
+            <li><strong>Micronutrients:</strong> Vitamin D, Calcium, Iron, Potassium, Cholesterol, Sodium</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Goals & Progress</h3>
+        <ul>
+            <li>Set daily calorie targets</li>
+            <li>Set weekly macro goals with min-max ranges</li>
+            <li>Visual progress bars with color coding (green = on track, red = over/under)</li>
+            <li>Automatic calorie offset from cardio workouts</li>
+            <li>Macro calendar to view historical data</li>
+        </ul>
+    </div>
+</div>
+
+<!-- WORKOUT TRACKING -->
+<h1>4. Workout Tracking</h1>
+
+<div class="section">
+    <h2>Gym / Weight Training</h2>
+
+    <div class="feature-box">
+        <h3>Workout Splits</h3>
+        <ul>
+            <li>Create custom workout splits (Push/Pull/Legs, Upper/Lower, Bro Split, etc.)</li>
+            <li>Use preset split templates</li>
+            <li>Organize exercises by training day</li>
+            <li>Switch between different splits</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Exercise Logging</h3>
+        <ul>
+            <li>Large database of common exercises</li>
+            <li>Add custom exercises</li>
+            <li>Log sets, reps, and weight for each exercise</li>
+            <li>Swipe gestures to quickly adjust values</li>
+            <li>Track progress over time with visual indicators (improved/same/regressed)</li>
+            <li>Automatic 1RM (one-rep max) estimation</li>
+        </ul>
+    </div>
+
+    <h2>Cardio Training</h2>
+
+    <div class="feature-box">
+        <h3>Activity Types</h3>
+        <ul>
+            <li><strong>Walk/Run</strong> - Outdoor with GPS tracking</li>
+            <li><strong>Cycling</strong> - Outdoor with GPS tracking</li>
+            <li><strong>Treadmill</strong> - Indoor without GPS</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Real-Time Tracking Features</h3>
+        <ul>
+            <li>GPS route tracking with map visualization</li>
+            <li>Distance measurement (miles or kilometers)</li>
+            <li>Elapsed time with timer</li>
+            <li>Calorie burn calculation based on activity type</li>
+            <li>Pause and resume workouts</li>
+            <li>View your route on a map after completion</li>
+            <li>Share cardio workouts to your feed</li>
+        </ul>
+    </div>
+</div>
+
+<!-- BODY COMPOSITION -->
+<h1>5. Body Composition Tracking</h1>
+
+<div class="section">
+    <div class="feature-box">
+        <h3>Manual Tracking</h3>
+        <ul>
+            <li>Log body weight</li>
+            <li>Record body fat percentage</li>
+            <li>Track muscle mass percentage</li>
+            <li>Support for various measurement methods (calipers, DEXA, etc.)</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>AI Body Analysis</h3>
+        <ul>
+            <li>Upload front, side, and back photos</li>
+            <li>AI-powered body fat percentage estimation</li>
+            <li>Get instant body composition feedback</li>
+            <li>Track changes over time</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Fitness Class System</h3>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><strong>Cutting</strong></td>
+                <td>Focused on fat loss while preserving muscle</td>
+            </tr>
+            <tr>
+                <td><strong>Bulking</strong></td>
+                <td>Focused on muscle gain with caloric surplus</td>
+            </tr>
+            <tr>
+                <td><strong>Maintenance</strong></td>
+                <td>Maintaining current physique</td>
+            </tr>
+            <tr>
+                <td><strong>Recomp</strong></td>
+                <td>Simultaneous fat loss and muscle gain</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- SOCIAL FEATURES -->
+<h1>6. Social Features</h1>
+
+<div class="section">
+    <div class="feature-box">
+        <h3>Feed</h3>
+        <ul>
+            <li>View posts from your training partners</li>
+            <li>Filter by post type: All, Posts, Cardio Activities, Awards, Boosts</li>
+            <li>Pull-to-refresh for latest content</li>
+            <li>Infinite scroll pagination</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Posts</h3>
+        <ul>
+            <li>Create posts with captions and images</li>
+            <li>Share cardio workout summaries as posts</li>
+            <li>Share earned awards as posts</li>
+            <li>Choose public or private visibility per post</li>
+            <li>Like and comment on posts</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Training Partners</h3>
+        <ul>
+            <li>Search and discover other users</li>
+            <li>Send training partner requests</li>
+            <li>View mutual connections</li>
+            <li>See followers and following lists</li>
+        </ul>
+    </div>
+</div>
+
+<!-- CHALLENGES -->
+<h1>7. Challenges & Competitions</h1>
+
+<div class="section">
+    <p>Compete one-on-one with other users in fitness challenges.</p>
+
+    <div class="feature-box">
+        <h3>Challenge Types</h3>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Metrics</th>
+            </tr>
+            <tr>
+                <td><strong>Gym Challenges</strong></td>
+                <td>Total reps, total weight lifted</td>
+            </tr>
+            <tr>
+                <td><strong>Cardio Challenges</strong></td>
+                <td>Distance, calories burned, sessions</td>
+            </tr>
+            <tr>
+                <td><strong>Body Composition</strong></td>
+                <td>Body fat reduction, weight change</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="feature-box">
+        <h3>Win Conditions</h3>
+        <ul>
+            <li><strong>Race:</strong> First person to reach the target wins</li>
+            <li><strong>Survival:</strong> Maintain a daily/weekly target consistently</li>
+            <li><strong>Comparison:</strong> Whoever improves more by the end date wins</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Challenge Tiers & Rewards</h3>
+        <table>
+            <tr>
+                <th>Tier</th>
+                <th>Stakes</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td><span class="badge badge-bronze">Bronze</span></td>
+                <td>Lower stakes</td>
+                <td>Base points</td>
+            </tr>
+            <tr>
+                <td><span class="badge badge-silver">Silver</span></td>
+                <td>Medium stakes</td>
+                <td>2x points</td>
+            </tr>
+            <tr>
+                <td><span class="badge badge-gold">Gold</span></td>
+                <td>High stakes</td>
+                <td>3x points</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- AWARDS -->
+<h1>8. Awards & Achievements</h1>
+
+<div class="section">
+    <div class="feature-box">
+        <h3>Award Categories</h3>
+        <ul>
+            <li>Nutrition awards (consistent meal logging)</li>
+            <li>Gym awards (workout consistency, volume milestones)</li>
+            <li>Cardio awards (distance milestones, session counts)</li>
+            <li>Social awards (likes, comments, posts)</li>
+            <li>Challenge awards (winning competitions)</li>
+            <li>Anniversary awards (app milestones)</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Difficulty Levels</h3>
+        <p>
+            <span class="badge badge-bronze">Bronze</span>
+            <span class="badge badge-silver">Silver</span>
+            <span class="badge badge-gold">Gold</span>
+            <span class="badge badge-diamond">Diamond</span>
+            <span class="badge badge-elite">Elite</span>
+        </p>
+        <ul>
+            <li><strong>Bronze:</strong> Entry-level achievements</li>
+            <li><strong>Silver:</strong> Intermediate milestones</li>
+            <li><strong>Gold:</strong> Advanced accomplishments</li>
+            <li><strong>Diamond:</strong> Expert-level achievements</li>
+            <li><strong>Elite:</strong> Top-tier mastery</li>
+        </ul>
+    </div>
+</div>
+
+<!-- LEADERBOARDS -->
+<h1>9. Leaderboards & Ranking</h1>
+
+<div class="section">
+    <div class="feature-box">
+        <h3>Rank Tiers</h3>
+        <p>Progress through tiers as you earn points from awards:</p>
+        <ol>
+            <li>Rookie</li>
+            <li>Rising</li>
+            <li>Bronze</li>
+            <li>Veteran</li>
+            <li>Expert</li>
+            <li>Master</li>
+            <li>Legend</li>
+        </ol>
+    </div>
+
+    <div class="feature-box">
+        <h3>Global Leaderboard</h3>
+        <ul>
+            <li>View top 10 users by rank points</li>
+            <li>See your current position</li>
+            <li>Track your progress toward the next tier</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Champions Lounge</h3>
+        <ul>
+            <li>Exclusive section for top 10 ranked users</li>
+            <li>Special privileges and recognition</li>
+            <li>Ability to boost posts</li>
+        </ul>
+    </div>
+</div>
+
+<!-- BOOST SYSTEM -->
+<h1>10. Boost System</h1>
+
+<div class="section">
+    <p>Top-ranked users can boost posts to increase their visibility across the entire platform.</p>
+
+    <div class="feature-box">
+        <h3>Boost Allocations (per year)</h3>
+        <table>
+            <tr>
+                <th>Rank</th>
+                <th>Annual Boosts</th>
+            </tr>
+            <tr>
+                <td>#1</td>
+                <td>15 boosts</td>
+            </tr>
+            <tr>
+                <td>#2-3</td>
+                <td>10 boosts</td>
+            </tr>
+            <tr>
+                <td>#4-5</td>
+                <td>5 boosts</td>
+            </tr>
+            <tr>
+                <td>#6-10</td>
+                <td>3 boosts</td>
+            </tr>
+        </table>
+        <p>Boosted posts appear in everyone's feed, not just training partners. Boosts reset annually on January 1st.</p>
+    </div>
+</div>
+
+<!-- HEALTH INTEGRATION -->
+<h1>11. Health Integration</h1>
+
+<div class="section">
+    <div class="feature-box">
+        <h3>Apple Health (iOS)</h3>
+        <ul>
+            <li>Sync workouts from Apple HealthKit</li>
+            <li>Import heart rate data</li>
+            <li>Track steps and activity</li>
+            <li>Write SpotMe workouts back to Health</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Health Connect (Android)</h3>
+        <ul>
+            <li>Sync workouts from Health Connect</li>
+            <li>Import fitness data from wearables</li>
+            <li>Two-way synchronization</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Data Synced</h3>
+        <ul>
+            <li>Workout sessions</li>
+            <li>Active calories burned</li>
+            <li>Distance traveled</li>
+            <li>Heart rate (min/max/average)</li>
+            <li>Step count</li>
+        </ul>
+    </div>
+</div>
+
+<!-- NOTIFICATIONS -->
+<h1>12. Notifications & Reminders</h1>
+
+<div class="section">
+    <div class="feature-box">
+        <h3>Push Notifications</h3>
+        <ul>
+            <li>Like notifications</li>
+            <li>Comment notifications</li>
+            <li>Challenge status updates</li>
+            <li>Award earned alerts</li>
+            <li>Training partner requests</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Custom Reminders</h3>
+        <ul>
+            <li>Set personal reminders for workouts, meals, etc.</li>
+            <li>Create, edit, and delete reminders</li>
+            <li>Notification center with unread count badge</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SETTINGS -->
+<h1>13. Settings & Preferences</h1>
+
+<div class="section">
+    <div class="feature-box">
+        <h3>Units</h3>
+        <ul>
+            <li>Distance: Miles or Kilometers</li>
+            <li>Weight: Pounds (lbs) or Kilograms (kg)</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Privacy Controls</h3>
+        <ul>
+            <li>Control which body stats are visible on your profile</li>
+            <li>Set default post visibility (public/private)</li>
+            <li>Manage training partner permissions</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h3>Legal Documents</h3>
+        <ul>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li>Content Guidelines</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+    <h2>Summary</h2>
+    <p>SpotMe provides a complete fitness ecosystem combining:</p>
+    <ul>
+        <li><strong>Comprehensive Tracking:</strong> Nutrition, workouts, and body composition</li>
+        <li><strong>Social Motivation:</strong> Training partners, posts, and interactions</li>
+        <li><strong>Gamification:</strong> Challenges, awards, ranks, and leaderboards</li>
+        <li><strong>Smart Technology:</strong> AI body analysis, OCR scanning, barcode lookup</li>
+        <li><strong>Health Integration:</strong> Apple Health and Health Connect support</li>
+        <li><strong>Personalization:</strong> Customizable goals, units, and privacy settings</li>
+    </ul>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p><strong>SpotMe</strong> - Your Fitness Journey Starts Here</p>
+    <p>Version 1.0.0 | December 2025</p>
+    <p>Support: sullivanrory9@gmail.com</p>
+</div>
+
+</body>
+</html>
