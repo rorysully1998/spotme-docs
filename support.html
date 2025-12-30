@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotMe - Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .header { text-align: center; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 2px solid rgba(96, 165, 250, 0.3); }
+        .logo { font-size: 48px; margin-bottom: 10px; }
+        h1 { font-size: 2.2rem; color: #60A5FA; margin-bottom: 10px; }
+        .tagline { color: #94a3b8; font-size: 1.1rem; }
+        h2 { font-size: 1.4rem; color: #60A5FA; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 1px solid rgba(96, 165, 250, 0.2); }
+        h3 { font-size: 1.1rem; color: #93c5fd; margin: 20px 0 10px; }
+        p { color: #cbd5e1; margin-bottom: 15px; }
+        ul, ol { color: #cbd5e1; margin: 15px 0 15px 25px; }
+        li { margin-bottom: 8px; }
+        strong { color: #f1f5f9; }
+        a { color: #60A5FA; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .section { background: rgba(255, 255, 255, 0.03); border-radius: 12px; padding: 25px; margin: 20px 0; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .highlight-box { background: rgba(96, 165, 250, 0.1); border-left: 4px solid #60A5FA; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .contact-card { background: rgba(96, 165, 250, 0.15); border-radius: 12px; padding: 30px; text-align: center; margin: 30px 0; }
+        .contact-icon { font-size: 40px; margin-bottom: 15px; }
+        .contact-email { font-size: 1.3rem; color: #60A5FA; font-weight: 600; }
+        .contact-note { color: #94a3b8; margin-top: 10px; font-size: 0.9rem; }
+        .faq-item { border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 20px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-question { color: #93c5fd; font-weight: 600; margin-bottom: 10px; font-size: 1.05rem; }
+        .faq-answer { color: #cbd5e1; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .link-card { background: rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 20px; text-align: center; transition: background 0.2s; }
+        .link-card:hover { background: rgba(255, 255, 255, 0.08); }
+        .link-icon { font-size: 28px; margin-bottom: 10px; }
+        .link-title { color: #60A5FA; font-weight: 600; }
+        .footer { text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #64748b; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🏋️</div>
+            <h1>SpotMe Support</h1>
+            <p class="tagline">Need help? We're here for you.</p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <p style="margin-bottom: 10px; color: #94a3b8;">Contact us at</p>
+            <a href="mailto:sullivanrory9@gmail.com" class="contact-email">sullivanrory9@gmail.com</a>
+            <p class="contact-note">We typically respond within 24-48 hours.</p>
+        </div>
+
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I track my macros?</p>
+                <p class="faq-answer">Navigate to the Calorie Tracker tab, tap the + button, and either search our food database, scan a nutrition label with your camera, or enter values manually.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I log a workout?</p>
+                <p class="faq-answer">Go to the Motion tab where you can log gym sessions with exercises, sets, reps, and weights. You can also track cardio activities like running, walking, and cycling.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How does the AI body analysis work?</p>
+                <p class="faq-answer">Upload a photo and our AI will estimate your body composition including body fat percentage and muscle mass. This is an estimate and should not replace professional assessments.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Can I sync with Apple Health?</p>
+                <p class="faq-answer">Yes! SpotMe integrates with Apple HealthKit to sync your workouts, calories, and activity data. Enable this in your profile settings under Health Sync.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I change my privacy settings?</p>
+                <p class="faq-answer">Go to your Profile, tap the settings icon, and you can control which stats are visible to other users (age, weight, height, body fat, muscle mass, fitness class).</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I delete my account?</p>
+                <p class="faq-answer">Go to Profile > Settings > Delete Account. This will permanently remove all your data from our servers. You can also email us to request account deletion.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do challenges work?</p>
+                <p class="faq-answer">You can challenge other users to fitness competitions. Go to a user's profile and tap "Challenge" to set up a workout or nutrition challenge with custom terms.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">What are Training Partners?</p>
+                <p class="faq-answer">Training Partners is our follow system. Follow other users to see their posts in your feed and stay motivated together.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Report a Bug</h2>
+            <p>Found something that's not working right? Please email us with:</p>
+            <ul>
+                <li>Your device model (e.g., iPhone 15 Pro)</li>
+                <li>Your iOS version (e.g., iOS 17.2)</li>
+                <li>Steps to reproduce the issue</li>
+                <li>Screenshots if possible</li>
+            </ul>
+            <div class="highlight-box">
+                <p style="margin: 0;"><strong>Email:</strong> <a href="mailto:sullivanrory9@gmail.com">sullivanrory9@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Feature Requests</h2>
+            <p>Have an idea to make SpotMe better? We'd love to hear it! Send your suggestions to <a href="mailto:sullivanrory9@gmail.com">sullivanrory9@gmail.com</a>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Legal Documents</h2>
+            <div class="links-grid">
+                <a href="privacy_policy.html" class="link-card">
+                    <div class="link-icon">🔒</div>
+                    <div class="link-title">Privacy Policy</div>
+                </a>
+                <a href="terms_of_service.html" class="link-card">
+                    <div class="link-icon">📜</div>
+                    <div class="link-title">Terms of Service</div>
+                </a>
+                <a href="content_guidelines.html" class="link-card">
+                    <div class="link-icon">💪</div>
+                    <div class="link-title">Content Guidelines</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>SpotMe Support</p>
+            <p>Last Updated: December 29, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
